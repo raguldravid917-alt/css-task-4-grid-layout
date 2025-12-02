@@ -17,9 +17,6 @@ css-task-4-grid-layout/
 ├── index.html
 └── style.css
 
-
-Example for you:
-
 ✍️ Author
 
 - Name: Ragul Dravid S  
