@@ -1,0 +1,135 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px 16px;
+  background: #020617;
+  border-bottom: 1px solid #1f2937;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Main Container */
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* ---------- CSS GRID ---------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* Mobile: 1 column */
+  gap: 18px;
+}
+
+/* Product Card */
+.product-card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  margin: 10px 10px 2px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  margin: 0 10px 10px;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.product-card button {
+  margin: auto 10px 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.product-card button:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.product-card button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* ---------- Tablet (≥ 768px) ---------- */
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);  /* Tablet: 2 columns */
+  }
+}
+
+/* ---------- Desktop (≥ 1024px) ---------- */
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);  /* Desktop: 4 columns */
+  }
+
+  .header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 14px;
+  background: #020617;
+  border-top: 1px solid #1f2937;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
